@@ -86,22 +86,22 @@ class LinkedList:
             while n.ref.ref is not None:
                 n = n.ref
             n.ref = None    
-    def delete_by_value(self,x):
+    def delete_by_value(self,data):
         if self.head is None:
-            print("can't delete ll is empty")
+            print("Linked list is empty")    
             return
-        if x==self.head.data:
+        if self.head.data == data:
             self.head = self.head.ref
             return
-        n = self.head
-        while n.ref is not None:
-            if x==n.ref.data:
+        i =self.head
+        while i.ref is not None:
+            if i.ref.data == data:
                 break
-            n= n.ref
-        if n.ref is None:
-            print("nod is not present!") 
+            i = i.ref
+        if i.ref is None:
+            print("Node you serached is Empty")    
         else:
-            n.ref = n.ref.ref                       
+            i.ref = i.ref.ref           
             
 LL1 = LinkedList()
 LL1.add_begin(10)
@@ -109,6 +109,6 @@ LL1.add_begin(20)
 LL1.add_begin(30)
 LL1.add_begin(40)
 LL1.add_before(100,40)
-# LL1.delete_by_value(40)
+LL1.delete_by_value(20)
 LL1.print__ll()
                         
