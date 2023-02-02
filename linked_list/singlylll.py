@@ -101,14 +101,30 @@ class LinkedList:
         if i.ref is None:
             print("Node you serached is Empty")    
         else:
-            i.ref = i.ref.ref           
+            i.ref = i.ref.ref   
+    def remove_duplicates(self):
+        if self.head is None:
+            return
+        unique_values = set()
+        unique_values.add(self.head.data)
+        curr = self.head
+        while curr.ref is not None:
+            if curr.ref.data in unique_values:
+                curr.ref = curr.ref.ref
+            else:
+                unique_values.add(curr.ref.data)
+                curr = curr.ref                
             
 LL1 = LinkedList()
 LL1.add_begin(10)
 LL1.add_begin(20)
+LL1.add_begin(20)
 LL1.add_begin(30)
 LL1.add_begin(40)
-LL1.add_before(100,40)
-LL1.delete_by_value(20)
+LL1.add_before(100,10)
 LL1.print__ll()
+# print()
+# LL1.remove_duplicates()
+# LL1.print__ll()
+
                         
