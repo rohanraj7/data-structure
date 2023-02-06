@@ -113,7 +113,7 @@ class LinkedList:
                 curr.ref = curr.ref.ref
             else:
                 unique_values.add(curr.ref.data)
-                curr = curr.ref                
+                curr = curr.ref                          
             
 LL1 = LinkedList()
 LL1.add_begin(10)
@@ -123,8 +123,9 @@ LL1.add_begin(30)
 LL1.add_begin(40)
 LL1.add_before(100,10)
 LL1.print__ll()
-# print()
-# LL1.remove_duplicates()
-# LL1.print__ll()
+print()
+LL1.remove_duplicates()
+LL1.print__ll()
+# LL1.add_alternative([5,15,25,30])
 
                         

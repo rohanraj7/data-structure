@@ -5,7 +5,7 @@ def removeduplicates(array):
         if array[i] in duplicates:
             array[i] = -1
         else:
-            duplicates.add(array[i])
+            duplicates.add(array[i])       
                 
     i = 0
     while i < len(array):

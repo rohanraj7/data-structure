@@ -30,4 +30,7 @@ def replace_alphabets(s,n):
     return result        
 s = "Man"
 n = 2
-print(replace_alphabets(s,n))            
+print(replace_alphabets(s,n))     
+
+
+       

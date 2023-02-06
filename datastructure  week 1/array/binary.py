@@ -11,12 +11,10 @@ def binary_search(arr,x):
             low = mid -1
     return -1
 arr = [1,2,3,4,5,6]
-x = 35
+x = 4
 result = binary_search(arr,x)
 if result != -1:
     print("element is present in index of : ",str(result))
 else:
     print("Element is not Found in array")    
-    
-    
     
