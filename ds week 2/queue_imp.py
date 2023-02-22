@@ -7,7 +7,7 @@ class Queue:
     def dequeue(self):
         if len(self.queue) < 1:
             return None
-        self.queue.pop()
+        self.queue.pop(0)
     def print(self):
         print(self.queue)
         
@@ -17,5 +17,5 @@ Q.enqueue(2)
 Q.enqueue(3)
 Q.enqueue(4)
 Q.dequeue()
-Q.print()
-
+# Q.print()
+print(Q.queue)

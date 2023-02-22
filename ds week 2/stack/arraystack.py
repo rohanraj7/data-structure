@@ -21,3 +21,28 @@ class ArrayStack:
 
     def is_empty(self):
         return self.top == -1     # Return True if the stack is empty, False otherwise
+stack = ArrayStack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.peek())    
+print(stack.pop())     
+print(stack.pop())     
+print(stack.is_empty())
+print(stack.pop())     
+print(stack.is_empty())
+print(stack.pop())     
+print(stack.array)
+
+# Output: 3
+# Output: 3
+# Output: 2
+   # Output: False
+# Output: 1
+   # Output: True
+# Output: None
+
+
+
+
+            
