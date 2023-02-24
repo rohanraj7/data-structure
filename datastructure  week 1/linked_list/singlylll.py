@@ -113,7 +113,29 @@ class LinkedList:
                 curr.ref = curr.ref.ref
             else:
                 unique_values.add(curr.ref.data)
-                curr = curr.ref                          
+                curr = curr.ref       
+    def bubble_sort(self):
+        if self.head is None:
+            print("Empty list")
+            return
+        # Get the length of the list
+        n = 0
+        m = self.head
+        while m is not None:
+            n += 1
+            m = m.ref
+        
+        # Perform bubble sort
+        for i in range(n-1):
+            m = self.head
+            for j in range(n-i-1):
+                if m.data > m.ref.data:
+                    # Swap the nodes
+                    temp = m.data
+                    m.data = m.ref.data
+                    m.ref.data = temp
+                m = m.ref                   
+                                   
             
 LL1 = LinkedList()
 LL1.add_begin(10)
@@ -125,6 +147,9 @@ LL1.add_before(100,10)
 LL1.print__ll()
 print()
 LL1.remove_duplicates()
+LL1.print__ll()
+print()
+LL1.bubble_sort()
 LL1.print__ll()
 # LL1.add_alternative([5,15,25,30])
 

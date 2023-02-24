@@ -37,6 +37,7 @@ class HashTable:
                 return
 
             index = (index + 1) % self.size
+            
 # Create a hash table of size 10
 ht = HashTable(10)
 

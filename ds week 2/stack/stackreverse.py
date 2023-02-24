@@ -6,7 +6,6 @@ def reverse_string(string):
     
     while len(stack) > 0:
         reverse_string += stack.pop()
-        
     return reverse_string    
 
 string = input("Enter the String: ")

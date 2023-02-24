@@ -57,7 +57,7 @@ class HashTable:
         self.table = [LinkedList() for _ in range(size)]
     
     def hash(self, key):
-        print("sds",hash(key) % self.size)
+        # print("sds",hash(key) % self.size)
         return hash(key) % self.size
     
     def insert(self, key, value):
@@ -75,14 +75,16 @@ class HashTable:
     
 ht = HashTable(10)
 ht.insert(1,'apple')
-print("lkj")
+# print("lkj")
 ht.insert(2,'banana')
-print("lkj")
+# print("lkj")
 ht.insert(5,'orange')
-ht.insert(5,'pazham')
-print("lkj")
+ht.insert(5,'jelly')
+ht.insert(5,'grape')
+# print("lkj")
 print(ht.search('apple'))  # Output: 1
-ht.delete(2)
+# ht.delete(2)
+
 
 for i in range(10):
     print(f"{i}: {ht.table[i]}")

@@ -11,15 +11,19 @@ class stack:
         return len(self.item)
     def stackmid(self):
         n = len(self.item)//2
-        self.item.pop(n)
+        if len(self.item)%2 == 0:
+            self.item.pop(n-1)
+        else:    
+            self.item.pop(n)    
 S = stack()
 S.push(1)
 S.push(2)
 S.push(3)
 S.push(4)
-S.push(5)
+# S.push(5)
+# S.push(6)
 # S.pop()
-# S.stackmid()
+S.stackmid()
 # print(S.peek)
 print(S.item)
 
