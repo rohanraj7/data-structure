@@ -20,12 +20,12 @@ class Node:
                 self.right.insert(data)        
             else:
                 self.right = Node(data)    
-    def printtree(self):
+    def inorder(self):
         if self.left:
-            self.left.printtree()
+            self.left.inorder()
         print(self.key, end=" ")    
         if self.right:
-            self.right.printtree()
+            self.right.inorder()
     def preOrder(self):
         print(self.key,end=" ")
         if self.left:
@@ -52,6 +52,17 @@ class Node:
                 self.left.searchkey(data)            
             else:
                 print("Node is not present")    
+    def level_order(self):
+        if self is None:
+            return
+        queue = [self]
+        while queue:
+            node = queue.pop(0)
+            print(node.key, end=" ")
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)            
     
     def deleteNode(self,data):
         if self.key is None:
@@ -114,21 +125,21 @@ class Node:
         
             
                           
-root = Node(21)
+root = Node(8)
 q = [100,30,25,10,12,5,3,7]
 for i in q:
     root.insert(i)
-root.printtree()   
+root.inorder()   
 print()
 root.preOrder() 
 print()
 root.postorder()
 print()
 root.searchkey(11)
-root.printtree()
+root.inorder()
 print()
 root.deleteNode(333)
-root.printtree()
+root.inorder()
 print()
 root.searchkey(1000)
 print(root.find_close_value(10))
@@ -137,5 +148,7 @@ if root.is_bst():
     print("the tree is binary search tree") 
 else:
     print("the tree is Not")    
+print()
+root.level_order()
 
                 

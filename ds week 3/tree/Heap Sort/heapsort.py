@@ -14,10 +14,10 @@ def heapsort(arr):
     n = len(arr)
     for i in range(n//2 -1,-1,-1):
         heapify(arr,n,i)
-    for i in range(n-1,0,-1):
+    for i in range(n-1,0,-1):   
         arr[i],arr[0] = arr[0],arr[i]
         heapify(arr,i,0)
 
-arr = [1,5,3,44,7,9,3]
+arr = [1,5,3,44,7,9]
 heapsort(arr)
 print(arr)
