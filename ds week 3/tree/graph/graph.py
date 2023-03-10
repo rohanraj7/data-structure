@@ -58,8 +58,32 @@ def BFS(node,graph):
             visited.add(current)
             for i in graph[current]:
                 queue.append(i)
+    
+# def dfs(graph, start):
+#     visited = set()  # to keep track of visited nodes
+#     stack = [start]  # to keep track of nodes to be visited using stack (DFS)
+#     while stack:
+#         node = stack.pop()  # take the last added node from stack
+#         if node not in visited:
+#             visited.add(node)
+#             print(node, end=' ')
+#             for neighbor in graph[node]:
+#                 if neighbor not in visited:
+#                     stack.append(neighbor)
+
+# def bfs(graph, start):
+#     visited = set()  # to keep track of visited nodes
+#     queue = [start]  # to keep track of nodes to be visited using queue (BFS)
+#     while queue:
+#         node = queue.pop(0)  # take the first added node from queue
+#         if node not in visited:
+#             visited.add(node)
+#             print(node, end=' ')
+#             for neighbor in graph[node]:
+#                 if neighbor not in visited:
+#                     queue.append(neighbor)
 graph = {}
-add_node("A")
+add_node("A")       
 add_node("B")
 add_node("C")
 add_node("D")
@@ -79,7 +103,7 @@ delete_node("C")
 print("After Node delection")
 print(graph)
 print("Ater edge deletion")
-delete_edge("B","D")
+delete_edge("B","D")    
 print(graph)
 
 DFS("A",graph)
@@ -87,5 +111,5 @@ print()
 BFS("A",graph)
         
 
-        
+            
         

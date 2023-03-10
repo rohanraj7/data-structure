@@ -44,7 +44,7 @@ class MinHeap:
             self.swap(index , largest)
             self.bubbledown(largest)       
 
-m = MinHeap([54,2,10,56])    
+m = MinHeap([2,8,59,6,7])    
 m.push(10)                   
 print(m.heap[1:len(m.heap)])   
 print(m.pop()) 
