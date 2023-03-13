@@ -9,7 +9,7 @@ class Node:
             self.key = data
             return
         if self.key == data:
-            return
+            return      
         if self.key > data:
             if self.left:
                 self.left.insert(data)
